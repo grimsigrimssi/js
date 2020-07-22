@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="/js/assets/js/math.js"></script>
+</head>
+<body>
+	<h1>계산기</h1>
+	
+	<input id="left" type="text" value=""> +			
+	<input id="right" type="text" value=""> =
+	<input id="sum" type="text" value="">
+	<button id="btnCal">계산하기</button>
+</body>
+
+<script type="text/javascript">
+		
+		var sum = plus(5, 5);
+		console.log(sum);
+
+</script>
+
+<script type="text/javascript">
+	window.onload = function(){
+		
+		var btnPlus = document.getElementById("btnCal");
+		
+		btnPlus.onclick = function(){	//1. 이벤트 잡기
+			console.log("플러스버튼 클릭");
+			
+			//left value값 일기
+			//right value값 읽기
+			//left + right 
+			//sum =left+right
+			
+			var left = document.getElementById("left");
+			var leftValue = left.value;
+			console.log(leftValue);
+			
+			var right = document.getElementById("right");
+			var rightValue = right.value;
+			console.log(rightValue);
+			
+			var sum = document.getElementById("sum");
+			sum.value = parseInt(leftValue) + parseInt(rightValue);
+			console.log(sum);
+	
+		};
+		
+		
+		
+		
+		
+	};
+
+</script>
+</html>
